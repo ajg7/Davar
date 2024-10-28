@@ -1,9 +1,12 @@
-// src/index.tsx
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 const App = () => {
-  return <div>Hello, React + TypeScript!</div>;
+  return <div>Hello, React + TypeScript! Darkness</div>;
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+}
